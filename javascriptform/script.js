@@ -16,17 +16,17 @@ function validateAllFields() {
 }
 
 function checkFirstname() {
-    const name = document.getElementById('name').value.trim();
-    const namePattern = /^[A-Za-z]{2,}\s([A-Za-z]{2,}\s)?[A-Za-z]{2,}$/;
-    if (name === "" || !namePattern.test(name)) {
-        throw new Error('Please enter your name');
+    const firstname = document.getElementById('firstname').value.trim();
+
+    if (firstname === "") {
+        throw new Error('Please enter your first name');
     }
-} 
+}
 
 function checkSurname() {
     const surname = document.getElementById('surname').value.trim();
-    const surnamePattern = /^[A-Za-z]{2,}\s([A-Za-z]{2,}\s)?[A-Za-z]{2,}$/;
-    if (surname === "" || !surnamePattern.test(surname)) {
+
+    if (surname === "") {
         throw new Error('Please enter your surname');
     }
 }
