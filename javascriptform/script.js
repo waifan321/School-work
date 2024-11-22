@@ -1,7 +1,7 @@
 document.getElementById('submitBtn').addEventListener('click', function() {
     try {
         validateAllFields(); // Call the main validation function
-        document.getElementById('message').innerText = "All inputs are valid.";
+        document.getElementById('message').innerText = "All inputs are valid."; // Display success message
     } catch (error) {
         document.getElementById('message').innerText = error.message; // Display the specific error message
     }
