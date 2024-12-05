@@ -2,6 +2,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     try {
         validateAllFields(); // Call the main validation function
         document.getElementById('message').innerText = "All inputs are valid.";
+        return; // Ensures the function exits after all validations are passed
     } catch (error) {
         document.getElementById('message').innerText = error.message; // Display the specific error message
     }
@@ -16,7 +17,7 @@ function validateAllFields() {
 }
 
 function checkFirstname() {
-    const firstname = document.getElementById('firstname').value.trim();
+    const firstname = document.getElementById('forename').value.trim();
 
     if (firstname === "") {
         throw new Error('Please enter your first name');
