@@ -11,21 +11,20 @@
     <form method="post" id="userForm" role="form" aria-labelledby="formTitle">
         <div>
             <label for="name">First Name:</label>
-            <input type="text" name="forename" id="forename" title="Enter your first name" placeholder="First Name" required>
-            <input type="text" name="firstname" id="name" required>
+            <input type="text" name="forename" id="firstname" placeholder="First Name" required>
         </div>
         <div>
             <label for="surname">Last Name:</label>
-            <input type="text" name="surname" id="surname" required>
+            <input type="text" name="surname" id="surname" placeholder="Surname" required>
         </div>
         <div>
 
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
         </div>
         <div>
             <label for="age">Age:</label>
-            <input type="number" name="age" id="age" required>
+            <input type="number" name="age" id="age" placeholder="Age" required>
         </div>
         <div>
             <label for="date">Date of Birth:</label>
@@ -273,7 +272,7 @@
                 <option value="Serbia">Serbia</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-            </select>
+            </select>   
         </div>
         <div>
             <label class = "checkbox">
@@ -281,7 +280,7 @@
                 <input type="checkbox" name="agree" id="agree" required>
             </label>
         </div>
-        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" id="submitBtn">Submit</button>
     </form>
     <p id="message"></p>
     <script src="script.js"></script>
