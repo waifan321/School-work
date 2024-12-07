@@ -3,9 +3,14 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     try {
         validateAllFields(); // Call the main validation function
         document.getElementById('message').innerText = "All inputs are valid.";
+        document.getElementById('message').style.color = "green";
+        setTimeout(function() {
+            window.location.href = "formComplete.html";
+        }, 1000); // Delays the redirection by 1 seconds
         return; // Ensures the function exits after all validations are passed
     } catch (error) {
         document.getElementById('message').innerText = error.message; // Display the specific error message
+        document.getElementById('message').style.color = "red";
     }
 });
 
@@ -15,6 +20,8 @@ function validateAllFields() {
     checkEmail()
     checkAge();
     checkDateofbirth();
+    checkBox();
+    checkNumber();  
     return; // Ensures the function exits after all validations are passed
 }
 
@@ -64,3 +71,18 @@ function checkDateofbirth() {
     }
 }
 
+function checkNumber() {
+    const number = document.getElementById('phone').value.trim();
+    const numberPattern =  /^\d{11}$/ ;
+
+    if (number === "" || !numberPattern.test(number)) {
+        throw new Error('Please enter a valid phone number');
+    }
+}
+
+function checkBox() {
+    const checkBox = document.getElementById('agree').checked;
+    if (checkBox === false){
+        throw new Error('Please check the box');
+    }
+}
